@@ -6,6 +6,51 @@
     <title>Sky Weather</title>
   </head>
   <body>
+     <header>
+        <form id="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city.."
+            required
+            class="search-input"
+            id="search-input"
+          />
+          <input type="submit" value="Search" class="search-button" />
+        </form>
+      </header>
+          </div>
+        />
+      </form>
+    </div>
+  <main>
+        <div class="current-weather">
+          <div>
+            <h1 class="current-city" id="current-city">Perth</h1>
+            <p class="current-details">
+              <span id="current-date"></span>, Sunny Skies <br />
+              Humidity: <strong>60%</strong>, Wind: <strong>14.2km/h</strong>
+            </p>
+          </div>
+          <div class="current-temperature" id="current-temperature">
+            <span class="current-temperature-icon">☀️</span
+            ><span class="current-temperature-value">30</span
+            ><span class="current-temperature-unit">°C</span>
+          </div>
+        </div>
+      </main>
+ <footer>
+        <p>
+          This project was coded by
+          <a href="#" target="_blank">Jessie Cain</a> and is
+          <a href="https://github.com/jmcain" target="_blank"> on GitHub</a> and
+          <a
+            href="https://app.netlify.com/teams/jmcain/projects"
+            target="_blank"
+            >hosted on Netlify</a
+          >
+        </p>
+      </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
