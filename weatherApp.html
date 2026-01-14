@@ -4,12 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="style.css" />
     <title>Sky Weather</title>
   </head>
@@ -22,7 +16,7 @@
             placeholder="Enter a city.."
             required
             class="search-input"
-            id="search-input"
+            id="search-form-input"
           />
           <input type="submit" value="Search" class="search-button" />
         </form>
@@ -31,8 +25,12 @@
         <div class="current-weather">
           <div>
             <h1 class="current-city" id="current-city">Perth</h1>
-            <p class="current-details">
-              <span id="current-date"></span> Sunny Skies<br />
+            <p class="current-details"> 
+              <span id="current-day"> Wednesday, </span>
+               <span id="current-time"> 19:26 |
+             
+              Sunny Skies
+              <br />
               Humidity: <strong>60%</strong>, Wind: <strong>14.2km/h</strong>
             </p>
           </div>
@@ -57,5 +55,5 @@
       </footer>
     </div>
   </body>
-  <script src="index.js"></script>
+  <script src="script.js"></script>
 </html>
