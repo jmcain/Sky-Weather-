@@ -69,26 +69,28 @@ main {
   line-height: 24px;
 }
 
+.current-temperature-container {
+  display: flex;
+  gap: 10px;
+}
 .current-details strong {
   color: #336382;
 }
 
-.current-temperature-icon {
-  position: relative;
-  top: -8px;
-  font-size: 40px;
+.weather-icon {
+  width: px;
   margin-right: 10px;
 }
 
 .current-temperature-value {
   font-size: 80px;
   font-weight: bold;
+  margin-left: 10px;
 }
 
 .current-temperature-unit {
   font-size: 28px;
-  position: relative;
-  top: -38px;
+  top: 16px;
 }
 
 footer {
