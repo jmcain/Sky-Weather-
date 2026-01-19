@@ -92,6 +92,34 @@ main {
   font-size: 28px;
   top: 16px;
 }
+.forecast-day {
+  text-align: center;
+  color: rgba(37, 78, 98, 0.4);
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.forecast-day-icon {
+  font-size: 38px;
+  text-align: center;
+}
+
+.temperatures-low-high {
+  text-align: center;
+  color: #336382;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.temp {
+  padding: 5px;
+}
+.forecast-flex-box {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
 
 footer {
   border-top: 1px solid #f9f7fe;
