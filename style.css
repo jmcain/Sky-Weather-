@@ -115,7 +115,7 @@ main {
 .temp {
   padding: 5px;
 }
-.forecast-flex-box {
+.forecast-day {
   display: flex;
   justify-content: space-around;
   margin-top: 30px;

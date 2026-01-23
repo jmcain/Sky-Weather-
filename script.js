@@ -55,3 +55,28 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Perth");
+
+function displayForecast() {
+  let forecastHtml = "";
+  let days = ["Tue", "Wed", "Thur", "Fri", "Sat"];
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+     <div class="forecast-day-section">
+              <div class="forecast-day">${day}</div>
+              <div class="forecast-day-icon">☀️</div>
+              <div class="temperatures-low-high">
+                <div class="temp"><strong> 30°</strong></div>
+                <div class="temp">15°</div>
+              </div>
+            </div>
+          </div>
+`;
+  });
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
+displayForecast();
