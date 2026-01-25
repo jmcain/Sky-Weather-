@@ -77,9 +77,8 @@ main {
   color: #336382;
 }
 
-.weather-icon {
-  width: px;
-  margin-right: 10px;
+.forecast-day-icon {
+  width: 3px;
 }
 
 .current-temperature-value {
@@ -88,8 +87,8 @@ main {
   margin-left: 10px;
 }
 
-.current-temperature-unit {
-  font-size: 28px;
+.temperatures-low-high {
+  font-size: 18px;
   top: 16px;
 }
 .forecast-day {
@@ -100,8 +99,10 @@ main {
   margin-bottom: 10px;
 }
 .forecast-day-icon {
-  font-size: 38px;
-  text-align: center;
+  width: 88px;
+  height: 88px;
+  display: block;
+  margin: 0 auto;
 }
 
 .temperatures-low-high {

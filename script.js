@@ -20,6 +20,7 @@ function refreshWeather(response) {
 
   getForecast(response.data.city);
 }
+searchCity("Perth");
 
 function formatDate(date) {
   let minutes = date.getMinutes();
@@ -64,29 +65,38 @@ function getForecast(city) {
   console.log(apiUrl);
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Mon", "Tue", "Wed", "Thurs", "Fri", "Sat", "Sun"];
+
+  return days[date.getDay()];
+}
+
 function displayForecast(response) {
   console.log(response.data);
 
   let forecastHtml = "";
-  let days = ["Tue", "Wed", "Thur", "Fri", "Sat"];
 
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `
      <div class="forecast-day-section">
-              <div class="forecast-day">${day}</div>
-              <div class="forecast-day-icon">☀️</div>
+              <div class="forecast-day">${formatDay(day.time)}</div>
+            <img src=${day.condition.icon_url} class="forecast-day-icon">
               <div class="temperatures-low-high">
-                <div class="temp"><strong> 30°</strong></div>
-                <div class="temp">15°</div>
+                <div class="temp"><strong> ${Math.round(
+                  day.temperature.maximum
+                )}</strong></div>
+                <div class="temp">${Math.round(day.temperature.minimum)}</div>
               </div>
             </div>
           </div>
 `;
+    }
   });
+
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 }
-
-searchCity("Perth");
